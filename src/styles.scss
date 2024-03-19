@@ -1,1 +1,172 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+
+
+.btn-outline-success {
+  --bs-btn-color: #007BFF;
+  --bs-btn-border-color: #007BFF;
+}
+
+.slide {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-control-next {
+  color: black;
+}
+
+
+.carousel-control-prev-icon {
+  background-image: url("assets/images/стрелка.png");
+}
+
+.carousel-control-next-icon {
+  background-image: url("assets/images/стрелка (1).png");
+}
+
+.d-block {
+  max-width: 1200px;
+  /*margin: 0 auto;*/
+}
+
+
+
+h1 {
+  text-align: center;
+  font-family: 'Arial',sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  margin-top: 72px;
+  margin-bottom: 50px;
+}
+
+
+
+.btn {
+  width: 170px;
+  padding: 7px 0 7px 0;
+}
+
+.zag {
+  margin: 72px 0 50px 0;
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 37px;
+  text-align: center;
+  color: #000000;
+}
+
+.group p {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-button:focus {
+  border-color: white;
+}
+
+.btn-primary {
+  margin-left: 10px;
+  margin-top: 24px;
+  margin-bottom: 104px;
+}
+
+#dialog {
+  display: none;
+}
+
+.img_col img {
+  width: 332px;
+}
+
+.footer {
+  background-color: #F8F9FA;
+}
+
+#Order-info {
+  max-width: 636px;
+}
+
+#btn {
+  margin-left: 0;
+}
+
+.img_col {
+  width: 100%;
+}
+
+.img_col img {
+  width: 100%;
+}
+
+.ui-accordion-content {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.accordion .accordion-item {
+  margin: 0 0 10px 0;
+}
+.accordion .ui-accordion-header {
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+.accordion .ui-accordion-header-icon {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 13px;
+  background: url(https://snipp.ru/img/down.png) 50% 50% no-repeat;
+}
+.accordion .ui-accordion-header-active .ui-accordion-header-icon {
+  background-image: url(https://snipp.ru/img/up.png);
+}
+.accordion .ui-accordion-content {
+  padding: 10px;
+}
+
+.col {
+  //height: 361px;
+  //width: 200px;
+  margin-right: 20px;
+  max-width: 335px!important;
+}
+
+.col:nth-child(3), .col:nth-child(6) {
+  margin-right: 0;
+}
+
+.col_ {
+  //grid-column-gap: 2px;
+  //justify-content: space-between;
+}
+
+
+.active_link.active {
+  color: black;
+}
+
+.btn.btn-white {
+  background: transparent!important;
+  border: 1px solid #007BFF;
+  color: #007BFF!important;
+  margin-top: 10px;
+}

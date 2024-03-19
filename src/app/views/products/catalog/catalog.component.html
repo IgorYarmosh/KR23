@@ -1,0 +1,13 @@
+
+<div class="container" id="container">
+<div class="col-lg-6 col-md-8 mx-auto">
+  <h1 class="fw-light">Наши чайные коллекции</h1>
+</div>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 col_">
+
+  <product-card *ngFor="let product of products" [product]="product"></product-card>
+
+
+
+</div>
+</div>

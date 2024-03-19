@@ -1,0 +1,93 @@
+<div class="container" id="container">
+
+  <form action="" [formGroup]="checkoutForm">
+    <div class="col-lg-6 col-md-8 mx-auto" id="Order-title">
+      <h2 class="fw-light fw-bold zag">Сделать заказ</h2>
+    </div>
+    <div class="container wow animate__backInUp" id="Order-info">
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="firstName" class="form-label text-left">Имя</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" value="" required=""
+                 formControlName="name">
+          <div class="invalid-feedback" *ngIf="isError('name')">
+            Заполните имя, поле может содержать только буквы!
+          </div>
+        </div>
+
+
+        <div class="col-sm-3">
+          <label for="LastName" class="form-label text-left">Фамилия</label>
+          <input type="text" class="form-control" id="LastName" placeholder="" value="" required=""
+                formControlName="last_name">
+          <div class="invalid-feedback" *ngIf="isError('last_name')">
+            Заполните фамилию, поле может содержать только буквы!
+          </div>
+        </div>
+
+
+        <div class="col-sm">
+          <label class="form-label text-left">Телефон</label>
+          <input type="tel" class="form-control" id="Tel" placeholder="" value="" required=""
+                 formControlName="phone">
+          <div class="invalid-feedback" *ngIf="isError('phone')">
+            Заполните номер телефона!
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <label class="form-label">Страна</label>
+          <input type="text" class="form-control" id="Country" placeholder="" value="" required=""
+                 formControlName="country">
+          <div class="invalid-feedback" *ngIf="isError('country')">
+            Заполните страну!
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="col-sm-12">
+            <label class="form-label">Индекс</label>
+            <input type="text" class="form-control" id="Index" maxlength="6" placeholder="" value=""
+                   required="" formControlName="zip">
+            <div class="invalid-feedback" *ngIf="isError('zip')">
+              Заполните индекс!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label class="form-label">Адрес</label>
+          <input type="text" class="form-control" id="Adress" placeholder="" value="" required=""
+                 formControlName="address">
+          <div class="invalid-feedback" *ngIf="isError('address')">
+            Заполните адрес!
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label class="form-label">Продукт</label>
+          <input type="text" class="form-control" placeholder="" value="" required=""
+                 formControlName="product" readonly>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <label class="form-label">Комментарий</label>
+          <input type="text" class="form-control" placeholder="" value="" required=""
+                 formControlName="comment">
+        </div>
+      </div>
+
+      <button class="btn btn-primary wow animate__backInUp hvr-sweep-to-bottom" type="submit" (click)="createOrder()">
+        Отправить
+      </button>
+    </div>
+  </form>
+
+
+</div>
+
+
+

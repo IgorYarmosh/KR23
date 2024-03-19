@@ -1,0 +1,23 @@
+<div class="card shadow-sm col">
+  <a class="img_col fon-image" href="../../../../assets/images/1_1.png">
+    <img src="{{product.image}}" alt="Image1">
+  </a>
+  <div class="card-body">
+    <h2 class="fs-2">{{product.title}}</h2>
+    <p class="card-text">{{product.description}}</p>
+    <div class="d-flex justify-content-between align-items-center product-action">
+
+      <a type="button"
+              class="btn btn-sm btn-outline-secondary bg-primary text-white hvr-sweep-to-right" routerLink="/order" [queryParams]="{product: product.title}">
+        Купить
+      </a>
+      <a type="button"
+              class="btn btn-white btn-sm btn-outline-secondary bg-primary text-white hvr-sweep-to-right" [routerLink]="['/catalog', product.id]">
+        Подробнее
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!--(click)="addToCart(product-card, orderElement)"-->
