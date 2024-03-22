@@ -11,41 +11,126 @@
   <div class="col-lg-6 col-md-8 mx-auto">
     <h2 class="fw-light fw-bold zag">Ответы на часто задаваемые вопросы</h2>
   </div>
-  <div id="accordion" class="accordion">
-    <div class="accordion-item">
-      <div class="accordion-header bg-primary text-white">Собираете ли вы подарочные боксы?</div>
-      <div>
-        <p>Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!</p>
+
+
+
+
+<!--  <div id="accordion" class="accordion">-->
+<!--    <div class="accordion-item">-->
+<!--      <div class="accordion-header bg-primary text-white">Собираете ли вы подарочные боксы?</div>-->
+<!--      <div>-->
+<!--        <p>Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="accordion-item">-->
+<!--      <div class="accordion-header bg-primary text-white">Сколько у вас разновидностей чая?</div>-->
+<!--      <div>-->
+<!--        <p>Достаточно! Более 100 видов чая на выбор!</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="accordion-item">-->
+<!--      <div class="accordion-header bg-primary text-white">В какой срок осуществляется доставка?</div>-->
+<!--      <div>-->
+<!--        <p>В течении 72 часов с момента заказа!</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="accordion-item">-->
+<!--      <div class="accordion-header bg-primary text-white">У вас обновляется ассортимент?</div>-->
+<!--      <div>-->
+<!--        <p>Да, три раза в месяц!</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="accordion-item">-->
+<!--      <div class="accordion-header bg-primary text-white">Какого объема у вас пачки чая?</div>-->
+<!--      <div>-->
+<!--        <p>От 100 грамм до 1 килограмма!</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+
+
+
+
+
+  <div ngbAccordion>
+    <div ngbAccordionItem [collapsed]="false">
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>Собираете ли вы подарочные боксы?</button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
+          </ng-template>
+        </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <div class="accordion-header bg-primary text-white">Сколько у вас разновидностей чая?</div>
-      <div>
-        <p>Достаточно! Более 100 видов чая на выбор!</p>
+    <div ngbAccordionItem>
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          Сколько у вас разновидностей чая?
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            Достаточно! Более 100 видов чая на выбор!
+          </ng-template>
+        </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <div class="accordion-header bg-primary text-white">В какой срок осуществляется доставка?</div>
-      <div>
-        <p>В течении 72 часов с момента заказа!</p>
+    <div ngbAccordionItem>
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          В какой срок осуществляется доставка?
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            В течении 72 часов с момента заказа!
+          </ng-template>
+        </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <div class="accordion-header bg-primary text-white">У вас обновляется ассортимент?</div>
-      <div>
-        <p>Да, три раза в месяц!</p>
+    <div ngbAccordionItem>
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          У вас обновляется ассортимент?
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            Да, три раза в месяц!
+          </ng-template>
+        </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <div class="accordion-header bg-primary text-white">Какого объема у вас пачки чая?</div>
-      <div>
-        <p>От 100 грамм до 1 килограмма!</p>
+    <div ngbAccordionItem>
+      <h2 ngbAccordionHeader>
+        <button ngbAccordionButton>
+          Какого объема у вас пачки чая?
+        </button>
+      </h2>
+      <div ngbAccordionCollapse>
+        <div ngbAccordionBody>
+          <ng-template>
+            От 100 грамм до 1 килограмма!
+          </ng-template>
+        </div>
       </div>
     </div>
+
   </div>
 
 
-  <div class="modal" tabindex="-1" #modal>
+
+
+
+<ng-template #popup>
+  <div class="" tabindex="-1" #modal>
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="popup-title">Посмотрите наши чайные коллекции</div>
@@ -58,6 +143,8 @@
       </div>
     </div>
   </div>
+</ng-template>
+
 
 </div>
 

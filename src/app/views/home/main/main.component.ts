@@ -1,22 +1,24 @@
-import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {CartService} from "../../../shared/services/cart.service";
 import {observable, Observable, Subscription} from "rxjs";
-import { Modal } from 'bootstrap';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+// import { Modal } from 'bootstrap';
 
-declare var $: any;
+
+// declare var $: any;
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements OnInit, OnDestroy {
+export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
 
   @ViewChild('modal', {static: true})
 
   private modalRef!: ElementRef<HTMLDivElement>;
 
-  private modal!: Modal;
+  // private modal!: Modal;
 
   private observable: Observable<string>;
 
@@ -24,7 +26,9 @@ export class MainComponent implements OnInit, OnDestroy {
 
 
 
- constructor(public cartService: CartService) {
+ constructor(public cartService: CartService,
+             private modalService: NgbModal
+             ) {
    this.observable = new Observable((observer) => {
      setTimeout(() => {
        observer.next('block');
@@ -32,23 +36,36 @@ export class MainComponent implements OnInit, OnDestroy {
    });
  }
 
- ngOnInit() {
-   this.subscription = this.observable.subscribe((param: any) => {
-     this.modal = new Modal(this.modalRef.nativeElement);
-     this.modal.show();
-    });
+ @ViewChild('popup')
+ popup!: TemplateRef<ElementRef>;
 
-   $('.accordion').accordion({
-     heightStyle: 'content',
-     header: '> .accordion-item > .accordion-header'
-   });
+ ngOnInit() {
+
+   // this.subscription = this.observable.subscribe((param: any) => {
+   //   this.modal = new Modal(this.modalRef.nativeElement);
+   //   this.modal.show();
+   //  });
+
+
+
+   // $('.accordion').accordion({
+   //   heightStyle: 'content',
+   //   header: '> .accordion-item > .accordion-header'
+   // });
 
 
  }
 
- ngOnDestroy() {
+ ngAfterViewInit() {
+   // this.modalService.open(this.popup, {});
+    this.subscription = this.observable.subscribe((param: any) => {
+      this.modalService.open(this.popup, {});
+     });
+ }
+
+  ngOnDestroy() {
    this.subscription?.unsubscribe();
-   this.modal?.hide();
+   // this.modal?.hide();
  }
 
 

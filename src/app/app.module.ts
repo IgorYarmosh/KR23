@@ -11,6 +11,7 @@ import {OrderModule} from "./views/order/order.module";
 import {SharedModule} from "./shared/shared.module";
 import {HeaderComponent} from "./shared/layout/header/header.component";
 import {FooterComponent} from "./shared/layout/footer/footer.component";
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {FooterComponent} from "./shared/layout/footer/footer.component";
     HomeModule,
     OrderModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    // NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
